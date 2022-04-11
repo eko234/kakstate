@@ -51,7 +51,7 @@ define-command dump-state %{
       echo "set-register pipe $kak_reg_pipe" >> "$kak_opt_state_dir/.kakstate"
       echo "set-register slash $kak_reg_slash" >> "$kak_opt_state_dir/.kakstate"
       echo "set-register underscore $kak_reg_underscore" >> "$kak_opt_state_dir/.kakstate"
-      echo "$kak_buflist" | tr " " "\n" | awk '{print "edit " $0}' >> "$kak_opt_state_dir/.kakstate"
+      echo "$kak_buflist" | tr " " "\n" | awk '/^[^\*].*[^\*]$/{print "edit " $0}' >> "$kak_opt_state_dir/.kakstate"
     fi
   }
 }
