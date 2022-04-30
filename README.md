@@ -12,3 +12,7 @@ you had opened since the last time you closed kakoune, if you desire a
 different behavior take a look at the code, is very simple and straightforward.
 
 I also stole some stuff from localkakrc. :)
+
+## ALSO!
+
+note that depending on your needs, you can extend or override the `dump-state` command, for example if some of your user defined commands use any option you can make `dump-state` also insert a line that when evaluated on load would read the last state you option had,
