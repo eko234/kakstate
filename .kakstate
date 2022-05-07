@@ -1,0 +1,36 @@
+set-register a 
+set-register b 
+set-register c 
+set-register d 
+set-register e 
+set-register f 
+set-register g 
+set-register h 
+set-register i 
+set-register j 
+set-register k 
+set-register l 
+set-register m 
+set-register n 
+set-register o 
+set-register p 
+set-register q 
+set-register r 
+set-register s 
+set-register t 
+set-register u 
+set-register v 
+set-register w 
+set-register x 
+set-register y 
+set-register z 
+set-register arobase 
+set-register colon b kakstate.kak b *debug* edit try edit nig try %{edit nigg} w q
+set-register caret 
+set-register dquote }
+set-register pipe 
+set-register slash 
+set-register underscore 
+edit kakstate.kak
+edit .kakstate
+edit nigg
