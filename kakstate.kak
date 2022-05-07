@@ -15,7 +15,7 @@ define-command load-state %{
     }
 }
 
-define-command dump-state -params 0..1 %{
+define-command dump-state -params 0..1 -override %{
   nop %sh{
     if [ -d $kak_opt_state_dir ]; then
       echo "set-register a $kak_reg_a" > "$kak_opt_state_dir/.kakstate"
@@ -52,6 +52,7 @@ define-command dump-state -params 0..1 %{
       echo "set-register slash $kak_reg_slash" >> "$kak_opt_state_dir/.kakstate"
       echo "set-register underscore $kak_reg_underscore" >> "$kak_opt_state_dir/.kakstate"
       echo "$kak_buflist" | tr " " "\n" | awk '/^[^\*].*[^\*]$/{print %try{ "edit " $0} }' >> "$kak_opt_state_dir/.kakstate"
+      $1
     fi
   }
 }
